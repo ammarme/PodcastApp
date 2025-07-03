@@ -9,8 +9,7 @@ A modern Android application built with Jetpack Compose that dynamically renders
 - **Infinite Scrolling**
   Sections are displayed with endless scrolling functionality on the main screen
 - **Dynamic View Types**
-  Each section has a specific display type: Two-line Grid, Square Grid, Queue, Big Square
-  Browse the latest movies with seamless infinite scrolling.
+  Each section has a specific display type: Two-line Grid, Square Grid, Queue, Big Square.
 
 https://github.com/user-attachments/assets/ad679a9a-9c48-440a-8ef5-37105fe3a6fb
 
