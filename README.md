@@ -85,9 +85,6 @@ Making architectural decisions quickly while ensuring long-term maintainability
 Balancing code quality with delivery speed
 
 
---[app](app)-------------------------
----------------------------
-
 ## Enhancements
 
 1. Advanced Caching Strategy: Implement multi-layer caching with Room database for offline-first
