@@ -1,4 +1,4 @@
-<h1 align="center">🎥ThmanyahCast</h1>
+<h1 align="center">🎥PodcastApp</h1>
 
 
 <h1>Project Overview</h1>
