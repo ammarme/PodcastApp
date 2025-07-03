@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Search bar strings -->
+    <string name="search_hint">Search here…</string>
+    <string name="search_content_description">Search</string>
+    <string name="search_clear_content_description">Clear search</string>
+
+    <!-- Empty state strings -->
+    <string name="search_empty_state_title">Start typing to search</string>
+    <string name="search_empty_state_subtitle">Find what you\'re looking for quickly and easily</string>
+
+    <!-- Search results strings -->
+    <string name="search_results_title">Search Results</string>
+    <string name="search_no_results_title">No results found</string>
+    <string name="search_no_results_subtitle">Try different keywords or check your spelling</string>
+
+    <!-- Search suggestions -->
+    <string name="search_recent_searches">Recent searches</string>
+    <string name="search_popular_searches">Popular searches</string>
+    <string name="search_clear_history">Clear search history</string>
+    <!-- Bottom navigation strings -->
+    <string name="nav_home">Home</string>
+    <string name="nav_search">Search</string>
+    <string name="nav_home_content_description">Home tab</string>
+    <string name="nav_search_content_description">Search tab</string>
+
+    <!-- Common UI strings -->
+    <string name="retry_text">Retry</string>
+    <string name="error_title">Something went wrong</string>
+    <string name="loading_text">Loading…</string>
+    <string name="no_internet_title">No Internet Connection</string>
+    <string name="no_internet_message">Please check your connection and try again</string>
+</resources>

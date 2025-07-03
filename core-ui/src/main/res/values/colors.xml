@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Existing color -->
+    <color name="cool_grey">#FF6B7280</color>
+
+    <!-- Search UI colors -->
+    <color name="search_background">#FFF8F9FA</color>
+    <color name="search_surface">#FFFFFFFF</color>
+    <color name="search_surface_variant">#FFF1F3F4</color>
+    <color name="search_outline">#FFE8EAED</color>
+    <color name="search_on_surface_variant">#FF5F6368</color>
+
+    <!-- Empty state colors -->
+    <color name="empty_state_icon">#FFE8EAED</color>
+    <color name="empty_state_text_primary">#FF3C4043</color>
+    <color name="empty_state_text_secondary">#FF5F6368</color>
+</resources>

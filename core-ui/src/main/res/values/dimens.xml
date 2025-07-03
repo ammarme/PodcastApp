@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Search bar dimensions -->
+    <dimen name="search_bar_height">56dp</dimen>
+    <dimen name="search_bar_corner_radius">28dp</dimen>
+    <dimen name="search_bar_elevation">6dp</dimen>
+    <dimen name="search_bar_margin_horizontal">16dp</dimen>
+    <dimen name="search_bar_margin_vertical">12dp</dimen>
+    <dimen name="search_bar_padding_horizontal">20dp</dimen>
+
+    <!-- Search icon dimensions -->
+    <dimen name="search_icon_size">24dp</dimen>
+    <dimen name="search_clear_icon_size">20dp</dimen>
+
+    <!-- Empty state dimensions -->
+    <dimen name="empty_state_icon_size">64dp</dimen>
+    <dimen name="empty_state_spacing">24dp</dimen>
+    <dimen name="empty_state_padding">32dp</dimen>
+
+    <!-- Search results dimensions -->
+    <dimen name="search_result_card_elevation">2dp</dimen>
+    <dimen name="search_result_card_corner_radius">12dp</dimen>
+    <dimen name="search_result_spacing">12dp</dimen>
+
+    <!-- Bottom navigation dimensions -->
+    <dimen name="bottom_nav_height">80dp</dimen>
+    <dimen name="bottom_nav_icon_size">24dp</dimen>
+    <dimen name="bottom_nav_text_size">12sp</dimen>
+    <dimen name="bottom_nav_elevation">0dp</dimen>
+    <dimen name="bottom_nav_icon_padding_top">4dp</dimen>
+
+    <!-- Common UI dimensions -->
+    <dimen name="loading_indicator_size">48dp</dimen>
+    <dimen name="error_icon_size">120dp</dimen>
+    <dimen name="card_elevation_small">1dp</dimen>
+    <dimen name="card_elevation_medium">2dp</dimen>
+    <dimen name="card_elevation_large">6dp</dimen>
+    <dimen name="corner_radius_small">4dp</dimen>
+    <dimen name="corner_radius_medium">8dp</dimen>
+    <dimen name="corner_radius_large">12dp</dimen>
+    <dimen name="corner_radius_extra_large">16dp</dimen>
+</resources>
