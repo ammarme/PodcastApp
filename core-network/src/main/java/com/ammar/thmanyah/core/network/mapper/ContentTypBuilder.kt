@@ -18,8 +18,6 @@ class ContentTypBuilder : JsonDeserializer<Content> {
         context: JsonDeserializationContext
     ): Content {
         val jsonObject = json.asJsonObject
-
-        // Try to determine type from existing ID fields (fallback for existing API)
         val contentType = when {
             jsonObject.has("episode_id") -> "episode"
             jsonObject.has("audiobook_id") -> "audiobook"

@@ -5,6 +5,7 @@ import androidx.compose.animation.expandVertically
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
 import androidx.compose.animation.shrinkVertically
+import androidx.compose.foundation.gestures.detectTapGestures
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
@@ -39,7 +40,11 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.focus.FocusRequester
+import androidx.compose.ui.focus.focusRequester
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.input.pointer.pointerInput
+import androidx.compose.ui.platform.LocalFocusManager
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.TextFieldValue
@@ -64,6 +69,14 @@ fun SearchScreen(
     val listState = rememberLazyListState()
     val state = viewModel.searchScreenState.value
     val searchQuery = remember { mutableStateOf(TextFieldValue("")) }
+    val focusManager = LocalFocusManager.current
+
+    val focusRequester = remember { FocusRequester() }
+
+    LaunchedEffect(Unit) {
+        delay(200)
+        focusRequester.requestFocus()
+    }
 
     LaunchedEffect(searchQuery.value.text) {
         delay(300)
@@ -81,6 +94,16 @@ fun SearchScreen(
                 .fillMaxSize()
                 .statusBarsPadding()
                 .imePadding()
+                .pointerInput(Unit) {
+                    detectTapGestures(
+                        onDoubleTap = { },
+                        onLongPress = { },
+                        onPress = {
+                            focusManager.clearFocus()
+                        }
+                    )
+                },
+            verticalArrangement = Arrangement.Top
         ) {
             Card(
                 modifier = Modifier
@@ -124,7 +147,8 @@ fun SearchScreen(
                         },
                         modifier = Modifier
                             .weight(1f)
-                            .padding(horizontal = AppTheme.spaces.spaceM),
+                            .padding(horizontal = AppTheme.spaces.spaceM)
+                            .focusRequester(focusRequester),
                         colors = TextFieldDefaults.colors(
                             focusedContainerColor = Color.Transparent,
                             unfocusedContainerColor = Color.Transparent,
