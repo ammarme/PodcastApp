@@ -74,7 +74,9 @@ for a clear distinction.
   In `SOLID (object-oriented design)`, so don't break this concept by
   mixing the responsibilities.
 
-![mvvm2](https://user-images.githubusercontent.com/1812129/68319008-e9d39d00-00bd-11ea-9245-ebedd2a2c067.png)
+
+![mvvm](https://github.com/user-attachments/assets/553d131f-8d3a-4f92-8114-b411006d1b5f)
+
 
 ## Challenges
 
