@@ -1,5 +1,3 @@
 <resources>
     <string name="app_name">ThmanyahTask</string>
-    <string name="retry_text">Retry</string>
-    <string name="error_title">Something went wrong</string>
 </resources>

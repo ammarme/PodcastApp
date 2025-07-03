@@ -5,9 +5,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.res.painterResource
 import coil3.compose.AsyncImage
-import com.ammar.thmanyah.core.ui.R
 import com.ammar.thmanyah.core.ui.theme.AppTheme
 
 @Composable
@@ -20,8 +18,8 @@ fun ImageLoader(
     AsyncImage(
         modifier = modifier.clip(cornerRadius),
         model = url,
-        placeholder = painterResource(R.drawable.placeholder_image),
-        error = painterResource(R.drawable.placeholder_image),
+        placeholder = null,
+        error = null,
         contentScale = contentScale,
         contentDescription = null,
     )

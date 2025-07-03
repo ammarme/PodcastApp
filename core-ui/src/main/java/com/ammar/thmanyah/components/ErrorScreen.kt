@@ -1,31 +1,24 @@
 package com.ammar.thmanyah.components
 
 import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Warning
 import androidx.compose.material3.Button
+import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.clipToBounds
-import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.airbnb.lottie.compose.LottieAnimation
-import com.airbnb.lottie.compose.LottieCompositionSpec
-import com.airbnb.lottie.compose.LottieConstants
-import com.airbnb.lottie.compose.animateLottieCompositionAsState
-import com.airbnb.lottie.compose.rememberLottieComposition
-import com.ammar.thmanyah.core.ui.R
 import com.ammar.thmanyah.core.ui.theme.AppTheme
 
 @Composable
@@ -33,7 +26,7 @@ fun ErrorFullScreen(
     modifier: Modifier = Modifier,
     title: String,
     message: String? = null,
-    retry: String = stringResource(R.string.retry_text),
+    retry: String = "Retry",
     retryAction: (() -> Unit)? = null
 ) {
     Column(
@@ -42,27 +35,14 @@ fun ErrorFullScreen(
             .fillMaxSize(),
         verticalArrangement = Arrangement.Center
     ) {
-        val composition by rememberLottieComposition(LottieCompositionSpec.RawRes(R.raw.error_animation))
-        val progress by animateLottieCompositionAsState(
-            composition,
-            iterations = LottieConstants.IterateForever
-        )
-
-        Box(
+        Icon(
+            imageVector = Icons.Default.Warning,
+            contentDescription = null,
             modifier = Modifier
                 .size(120.dp)
-                .align(Alignment.CenterHorizontally)
-                .clipToBounds()
-        ) {
-            LottieAnimation(
-                composition = composition,
-                progress = { progress },
-                modifier = Modifier
-                    .fillMaxSize()
-                    .align(Alignment.Center)
-
-            )
-        }
+                .align(Alignment.CenterHorizontally),
+            tint = MaterialTheme.colorScheme.error
+        )
 
         Text(
             text = title,
@@ -99,7 +79,6 @@ fun ErrorFullScreen(
 @Preview
 @Composable
 fun ErrorFullScreenPreview() {
-
     ErrorFullScreen(
         title = "Something went wrong",
         retryAction = {}
